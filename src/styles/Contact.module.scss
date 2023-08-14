@@ -1,0 +1,248 @@
+.contentBox {
+  @apply flex justify-center gap-[5vw];
+
+  .formBox {
+    @apply w-[24vw] p-[1vw] rounded-[.2vw] relative overflow-hidden;
+    background: rgba($color: #000000, $alpha: 0.3);
+    box-shadow: 0 0 0.6vw 0.03vw rgba($color: #000000, $alpha: 0.2);
+
+    .film {
+      @apply absolute left-0 top-0 h-full w-full bg-black opacity-30 z-10;
+    }
+
+    .success {
+      @apply absolute z-20 top-1/2 left-1/2 w-full h-full bg-green-600 flex flex-col justify-center items-center;
+      transition: 300ms ease-in-out;
+      transform: translateX(-50%) translateY(-50%);
+      animation: 200ms linear sendedEmail;
+
+      svg {
+        @apply text-[6vw];
+      }
+      span {
+        @apply font-[300] text-[1.2vw];
+      }
+    }
+    
+    h5 {
+      @apply text-[1.9vw];
+    }
+
+    p {
+      @apply text-[.8vw] opacity-90 font-[300] ml-[.1vw];
+    }
+
+    .boxInput {
+      @apply w-full my-[1vw];
+
+      p {
+        @apply text-[1vw] font-[400] opacity-100;
+      }
+
+      input, textarea {
+        @apply w-full h-[2vw] rounded-[.2vw] border-solid border-[.14vw] border-transparent pl-[.5vw] text-[.9vw] transition-all;
+        outline: 0;
+        background: rgba($color: #000000, $alpha: .5);
+        box-shadow: 0 0 0.6vw 0.03vw rgba($color: #000000, $alpha: 0.2);
+
+        &:focus {
+          @apply border-contrast-light-blue border-solid border-[.14vw];
+        }
+      }
+
+      textarea {
+        @apply min-h-[10vw] max-h-[10vw] min-w-full max-w-full p-[.5vw] resize-none;
+
+        &::-webkit-scrollbar {
+          width: .43vw;
+        }
+        
+        &::-webkit-scrollbar-track {
+          background: transparent; 
+        }
+         
+        &::-webkit-scrollbar-thumb {
+          padding: 0 .1vw;
+          border-right: .3vw solid transparent;
+          border-top: .3vw solid transparent;
+          border-bottom: .3vw solid transparent;
+          background: #909090;
+          background-clip: padding-box;
+          // border-radius: 100px;
+        }
+        
+      }
+    }
+
+    .submitButton {
+      @apply w-full bg-contrast-light-blue h-[2.5vw] rounded-[.2vw];
+
+      span {
+        @apply text-[1vw];
+      }
+    }
+  }
+
+  .staticDataBox {
+    @apply relative mt-[1vw];
+
+    .imageBox {
+      @apply w-[15vw] h-[15vw] p-[.3vw] rounded-[50%] flex justify-center items-center;
+      background: rgba($color: #000000, $alpha: .4);
+
+      svg {
+        @apply absolute h-[115%] w-[115%] transition-all;
+        animation: 25s Rotate linear infinite;
+      }
+
+      .imageContent{
+        @apply w-full h-full relative rounded-[50%] overflow-hidden;
+        
+        img {
+          height: auto !important;
+        }
+      }
+    }
+
+    .textBox {
+      @apply mt-[3vw] flex flex-col items-center gap-[1.8vw];
+
+      .itemContent {
+        @apply relative flex justify-center items-center gap-[.4vw];
+  
+        svg {
+          @apply text-[1.6vw] fill-slate-100;
+        }
+
+        .text {
+          @apply cursor-pointer text-[.9vw] relative opacity-90;
+          text-decoration: none;
+
+          &::after {
+            @apply w-full h-[.15vw] bg-contrast-light-blue absolute bottom-0 left-0;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes sendedEmail {
+  from {
+    @apply w-0 h-0 opacity-0;
+  }
+
+  to {
+    @apply w-full h-full opacity-100;
+  }
+}
+
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contentBox {
+    @apply flex-col justify-normal items-center px-[6vw];
+  
+    .formBox {
+      @apply w-full p-[3vw] rounded-[.4vw];
+    
+      .success {
+          svg {
+          @apply text-[25vw];
+        }
+        span {
+          @apply text-[4vw];
+        }
+      }
+      
+      h5 {
+        @apply text-[6vw];
+      }
+  
+      p {
+        @apply text-[3vw] ml-[0];
+      }
+  
+      .boxInput {
+        @apply w-full my-[5vw];
+  
+        p {
+          @apply text-[3.4vw] mb-[1vw];
+        }
+  
+        input, textarea {
+          @apply h-[9vw] rounded-[.7vw] border-[.5vw] pl-[2vw] text-[3vw];
+          box-shadow: 0 0 0.9vw 0.05vw rgba($color: #000000, $alpha: 0.2);
+  
+          &:focus {
+            @apply border-[.5vw];
+          }
+        }
+  
+        textarea {
+          @apply min-h-[34vw] max-h-[34vw] p-[2vw];
+  
+          &::-webkit-scrollbar {
+            width: .86vw;
+          }
+          
+          &::-webkit-scrollbar-track {
+            background: transparent; 
+          }
+           
+          &::-webkit-scrollbar-thumb {
+            padding: 0 .2vw;
+            border-right: .6vw solid transparent;
+            border-top: 1vw solid transparent;
+            border-bottom: 1vw solid transparent;
+          }
+          
+        }
+      }
+  
+      .submitButton {
+        @apply h-[10vw] rounded-[.6vw];
+  
+        span {
+          @apply text-[4vw];
+        }
+      }
+    }
+
+    .staticDataBox {
+      @apply mt-[9vw];
+  
+      .imageBox {
+        @apply w-[62vw] h-[62vw] p-[3vw];
+      }
+  
+      .textBox {
+        @apply my-[13vw] gap-[9vw];
+  
+        .itemContent {
+          @apply gap-[1vw];
+    
+          svg {
+            @apply text-[10vw];
+          }
+  
+          .text {
+            @apply text-[5vw];
+  
+            &::after {
+              @apply h-[.7vw] rounded-[10%];
+            }
+          }
+        }
+      }
+    }
+  }
+}

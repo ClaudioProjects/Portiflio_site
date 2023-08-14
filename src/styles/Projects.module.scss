@@ -1,0 +1,87 @@
+.projectsBox {
+  .projects {
+    @apply relative w-full;
+
+    .cardProject {
+      @apply h-[25vw] w-[95%] mx-auto rounded-[.5vw] bg-[#3455C9] overflow-hidden;
+      box-shadow: 0 0 0.5vw 0.1vw rgba($color: #000000, $alpha: 0.1);
+
+      .cardImageBox {
+        @apply h-[50%] relative w-full p-[.5vw] bg-[#152252];
+
+        .cardImage {
+          @apply w-full h-full relative;
+        }
+      }
+
+      .cardDescription {
+        @apply p-[1vw] flex flex-col justify-between h-1/2 relative;
+
+        .cardLinkBox {
+          @apply absolute top-[1vw] right-[1vw] flex gap-[1vw];
+
+          a > svg {
+            @apply text-[1.4vw] opacity-40 transition-all;
+
+            &:hover {
+              @apply opacity-95;
+            }
+          }
+        }
+
+        h3 {
+          @apply text-[1.2vw];
+        }
+
+        p {
+          @apply font-[300] text-[.82vw] opacity-95;
+        }
+
+        span {
+          @apply font-[300] text-[.77vw] opacity-90;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .projectsBox {
+    .projects {
+      @apply relative w-[80%] mx-auto h-auto;
+
+      .cardProject {
+        @apply h-[85vw] m-[2vw] rounded-[2vw];
+        box-shadow: 0 0 0.7vw 0.1vw rgba($color: #000000, $alpha: 0.15);
+
+        .cardImageBox {
+          @apply h-[50%] w-full p-[3vw];
+        }
+
+        .cardDescription {
+          @apply p-[3vw];
+
+          .cardLinkBox {
+            @apply absolute top-[3vw] right-[3vw] gap-[3vw];
+
+            a > svg {
+              @apply text-[5vw];
+            }
+          }
+
+          h3 {
+            @apply text-[5vw];
+          }
+
+          p {
+            @apply text-[2.8vw] opacity-95;
+          }
+
+          span {
+            @apply text-[2.2vw] opacity-90;
+          }
+        }
+      }
+    }
+  }
+}

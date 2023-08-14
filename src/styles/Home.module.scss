@@ -1,0 +1,224 @@
+.MainBox {
+  @apply w-full min-h-[100vh] relative flex bg-dark-blue-bg;
+  background-image: linear-gradient(to left top, #3251c2, #3353c6, #3454c9, #3556cd, #3658d1);
+
+  .svgBackground {
+    @apply w-full h-[66.667vw] absolute bottom-0 left-0;
+    background-size: cover;
+    // background-image: url("/bg-003.svg");
+  }
+
+  .boxText {
+    @apply ml-[8vw] mt-[13.5vw] w-[41vw];
+
+    h1 {
+      @apply text-[3.5vw] font-[500] text-light-color;
+
+      span {
+        @apply text-tag-pink font-[500];
+
+        &:nth-child(2) {
+          @apply text-golden-contrast;
+        }
+      }
+    }
+
+    .descriptionText {
+      @apply font-[300] pr-[1vw] pl-[.5vw] opacity-[.85] text-[.9vw] mt-[1.5vw] tracking-[.07vw] rounded-[.1vw] w-[70%];
+    }
+
+    .buttonContactMe {
+      @apply bg-contrast-light-blue mt-[1.5vw] p-[.15vw] ml-[.5vw] rounded-[.3vw] relative z-[1] flex justify-center items-center overflow-hidden;
+
+      .borderItem {
+        @apply absolute w-[140%] h-[70%] bg-[#FFF] z-0;
+        animation: 5s borderRotate linear infinite ;
+      }
+
+      .content {
+        @apply z-10 h-full w-full relative bg-contrast-light-blue text-[1.1vw] p-[.7vw] rounded-[.3vw]; 
+        svg {
+          transform: rotate(-45deg);
+          @apply text-[1.3vw] ml-[.5vw];
+          animation: animationIconContactMe 6s linear infinite;
+        }
+      }
+
+
+      &:hover {
+        .borderItem { 
+          @apply bg-tag-pink;
+        }
+        .content {
+          svg {
+            @apply fill-golden-contrast
+          }
+        }
+      }
+    }
+  }
+
+  .rightSideFirstSectionBox {
+
+    .iconsBox {
+      @apply h-[27vw] w-[27vw] rounded-[50%] absolute top-[7vw] right-[29vw];
+      animation: borderRotate 20s linear infinite;
+
+      svg {
+        @apply text-[2.3vw] absolute;
+        animation: toTop 30s linear infinite;
+      
+        &:nth-child(1) {
+          @apply top-0 left-[40%] fill-[#58A149];
+        }
+
+        &:nth-child(2) {
+          @apply right-[8%] top-[20%];
+        }
+
+        &:nth-child(3) {
+          @apply right-[1%] bottom-[37%] fill-[#58C3DF];
+        }
+
+        &:nth-child(4) {
+          @apply right-[19%] bottom-[8%] fill-[#3D9DD7];
+        }
+
+        &:nth-child(5) {
+          @apply left-[33%] bottom-[1%] fill-[#F05639];
+        }
+
+        &:nth-child(6) {
+          @apply left-[6%] bottom-[25%] fill-[#097ECD];
+        }
+
+        &:nth-child(7) {
+          @apply left-[4%] top-[27%] fill-[#252629];
+        }
+      }
+    }
+
+    .emphasisImageBox {
+      background-image: url("/bg-image-first-page.svg");
+      background-size: cover;
+
+      @apply absolute w-[35vw] h-[35vw] top-[9vw] right-[5vw] p-[7vw];
+
+      div {
+        @apply relative w-full h-full;
+      }
+    }
+  }
+}
+
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes animationIconContactMe {
+  0% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    transform: translateY(5vw);
+  }
+
+  50% {
+    transform: translateY(0vw);
+  }
+
+  100% {
+    transform: translateY(5vw);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .MainBox {
+    @apply flex-col h-auto;
+
+    .boxText {
+      @apply ml-[0vw] px-[5vw] mt-[30vw] w-full;
+  
+      h1 {
+        @apply text-[10vw];
+      }
+  
+      .descriptionText {
+        @apply pl-[3vw] pr-[7vw] text-[2.8vw] mt-[2vw] tracking-[.07vw] rounded-[.1vw] w-full;
+      }
+  
+      .buttonContactMe {
+        @apply mt-[3vw] p-[0.6vw] ml-[2.7vw] rounded-[.6vw] w-[85%] h-[10vw];
+  
+        .borderItem {
+          @apply absolute w-[140%] h-[70%] bg-[#FFF] z-0;
+          animation: 5s borderRotate linear infinite ;
+        }
+  
+        .content {
+          @apply flex justify-center items-center z-10 h-full w-full relative bg-contrast-light-blue text-[1.1vw] rounded-[.3vw]; 
+          span {
+            @apply text-[3.4vw]
+          }
+          svg {
+            @apply text-[4vw] ml-[.5vw];
+            transform: rotate(-45deg);
+            animation: animationIconContactMe 6s linear infinite;
+          }
+        }
+  
+  
+        &:hover {
+          .borderItem { 
+            @apply bg-tag-pink;
+          }
+          .content {
+            svg {
+              @apply fill-golden-contrast
+            }
+          }
+        }
+      }
+    }
+
+    .rightSideFirstSectionBox {
+      .iconsBox {
+        @apply h-[67vw] w-[67vw] rounded-[50%] top-[85vw] right-[5vw];
+        animation: borderRotate 20s linear infinite;
+  
+        svg {
+          @apply text-[7vw] absolute;
+          animation: toTop 30s linear infinite;
+        }
+      }
+  
+      .emphasisImageBox {
+        background-image: url("/bg-image-first-page.svg");
+        background-size: cover;
+  
+        @apply relative w-[70vw] h-[70vw] right-auto top-auto mt-[14vw] left-[2vw] p-[7vw];
+  
+        div {
+          @apply relative w-full h-full;
+        }
+      }
+    }
+  }
+}

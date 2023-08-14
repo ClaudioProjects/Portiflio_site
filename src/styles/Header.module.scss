@@ -1,0 +1,155 @@
+.headerBox {
+  @apply fixed top-0 w-[100vw] z-10 h-[4vw] flex justify-between items-center px-[6vw];
+
+  &::after {
+    @apply absolute top-[-100%] left-0 w-full h-full -z-10 bg-contrast-purple;
+    transition: 100ms ease-in-out;
+    content: '';
+    box-shadow: 0 0 .7vw 0.02vw rgba($color: #000000, $alpha: .5);
+  }
+
+  h2 {
+    @apply text-tag-pink text-[1.5vw];
+  }
+
+  .boxButtons {
+    @apply flex justify-between gap-[6vw] items-center;
+
+    button {
+      @apply flex justify-center items-center relative ;
+      span {
+        @apply text-[1.1vw] font-[500];
+
+
+        &::after {
+          @apply left-1/2 bottom-[-.5vw] h-[.2vw] rounded-[1vw] w-[0%] bg-contrast-light-blue absolute;
+          content: '';
+          transform: translateX(-50%);
+          transition: 300ms ease-in-out;
+        }
+      }
+
+    }
+
+    .selected {
+      span {
+        &::after {
+          @apply w-[120%];
+        }
+      }
+    }
+
+    .closeMobileMenu {
+      @apply hidden;
+    }
+  }
+
+  .boxButtonsShowMobile {
+    @extend .boxButtons;
+  }
+
+  .menuButtonMobile {
+    @apply hidden;
+  }
+}
+
+.headerBoxScrolled {
+  @extend .headerBox;
+
+  &::after {
+    @apply top-0;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .headerBox {
+    @apply h-[15vw] px-[6vw] gap-0;
+  
+    &::after {
+      @apply bg-contrast-purple;
+      box-shadow: 0 0 .7vw 0.02vw rgba($color: #000000, $alpha: .5);
+    }
+  
+    h2 {
+      @apply text-[4.5vw];
+    }
+  
+    .boxButtons {
+      @apply flex right-[-200vw] top-[-200vh] flex-col gap-[20%] justify-center items-center absolute w-[100vw] h-[100vh] z-20;
+      transition: 800ms ease-in-out;
+      &::after {
+        @apply w-[200vh] h-[200vh] rounded-[50%] bg-contrast-purple absolute z-[-1];
+        content: '';
+      }
+
+      button {
+        span {
+          @apply text-[4vw];
+          &::after {
+            @apply bottom-[-1.7vw] h-[.9vw] rounded-[1vw];
+          }
+        }
+      }
+  
+      .selected {
+        span {
+          &::after {
+            @apply w-[120%];
+          }
+        }
+      }
+
+      
+      .closeMobileMenu {
+        @apply block absolute top-[6vw] right-[6vw];
+        svg {
+          @apply text-[9vw] fill-red-500;
+          rotate: (45deg);
+        }
+      }
+    }
+
+    .boxButtonsShowMobile {
+      @apply top-0 right-0;
+    }
+
+    .menuButtonMobile {
+      @apply block;
+      
+      svg {
+        @apply text-[7vw];
+      }
+    }
+  }
+  
+  .headerBoxScrolled {
+  
+    &::after {
+      @apply top-0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) { 
+
+  .headerBox {
+    h2 {
+      @apply text-[6vw];
+    }
+
+    .boxButtons { 
+      button {
+        span {
+          @apply text-[6vw];
+        }
+      }
+    }
+
+    .menuButtonMobile {      
+      svg {
+        @apply text-[9vw];
+      }
+    }
+  }
+}

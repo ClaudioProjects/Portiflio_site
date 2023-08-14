@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/image-projects-1.jpeg",
+    "link": "https://www.colegioinvictusbarroso.com.br/",
+    "github": null,
+    "name": "Colégio Invictus",
+    "description": "Site escolar que aprimora e centraliza a administração, permitindo criar registros acadêmicos e realizar tarefas diretamente pela plataforma online, ajudando a manter as informações escolares.",
+    "technology": "Next 12 | Tailwind | Express | MYSQL"
+  },
+  {
+    "path": "/image-projects-2.jpg",
+    "github": "https://github.com/ClaudioProjects/SmartList",
+    "link": null,
+    "name": "SmartList",
+    "description": "Site pessoal concebido como uma lista de tarefas, permitindo a criação de múltiplas listas, cada uma capaz de conter uma série de tarefas organizadas por horário, e também incorporando um sistema de controle de estoque.",
+    "technology": "Express | MongoDB"
+  },
+  {
+    "path": "/image-projects-3.png",
+    "github": "https://github.com/ClaudioProjects/Stock-Mager",
+    "link": null,
+    "name": "Stock Manager",
+    "description": "Site pessoal de gerenciamento de estoque, utilizando a API do CrudCrud para efetuar o armazenamento dos produtos.",
+    "technology": "React | Tailwind"
+  }
+]

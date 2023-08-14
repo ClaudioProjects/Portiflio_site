@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Typescript",
+    "iconPath": "/icons/typescript.png",
+    "description": "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. Ela é uma extensão da linguagem JavaScript que adiciona recursos de tipagem estática e outras funcionalidades avançadas para tornar o desenvolvimento de software mais seguro, eficiente e escalável.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "NextJs",
+    "iconPath": "/icons/nextjs.png",
+    "description": "O Next.js é um framework de desenvolvimento web React de código aberto que foca em proporcionar a criação de aplicações web modernas, eficientes e de alto desempenho. Ele simplifica a construção de interfaces de usuário interativas e dinâmicas, combinando a biblioteca React com recursos avançados de renderização do lado do servidor (SSR) e renderização do lado do cliente (CSR).",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "NodeJs",
+    "iconPath": "/icons/nodejs.png",
+    "description": "Node.js é um ambiente de tempo de execução de código aberto, construído sobre o motor JavaScript V8 do Google Chrome. Ele permite que os desenvolvedores executem código JavaScript do lado do servidor, em vez de apenas no navegador. Com o Node.js, você pode criar aplicações web e servidores altamente escaláveis, eficientes e em tempo real.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "Express",
+    "iconPath": "/icons/express.png",
+    "description": "Express.js, muitas vezes referido apenas como 'Express', é um framework web minimalista para Node.js. Ele é projetado para simplificar o desenvolvimento de aplicações web e APIs, fornecendo uma camada de abstração sobre o servidor HTTP do Node.js e oferecendo recursos para lidar com rotas, middlewares e solicitações de maneira eficiente e organizada.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "Tailwind",
+    "iconPath": "/icons/tailwind.png",
+    "description": "Tailwind CSS é um framework de design de código aberto que permite criar interfaces de usuário altamente personalizáveis e responsivas de maneira eficiente. Diferentemente dos frameworks CSS tradicionais, que geralmente têm classes pré-definidas e estilizadas, o Tailwind CSS fornece uma abordagem mais flexível, onde você constrói suas interfaces combinando classes utilitárias diretamente no HTML.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "React",
+    "iconPath": "/icons/react.png",
+    "description": "React, também conhecido como React.js ou ReactJS, é uma biblioteca de código aberto mantida pelo Facebook. Ela é amplamente utilizada para construir interfaces de usuário interativas e reativas em aplicações web. A principal característica distintiva do React é sua abordagem de desenvolvimento baseada em componentes, onde os diferentes elementos da interface são tratados como componentes reutilizáveis e independentes.",
+    "use": "Utilizo Regularmente",
+    "useType": 1
+  },
+  {
+    "name": "MYSQL",
+    "iconPath": "/icons/mysql.png",
+    "description": "MySQL é um sistema de gerenciamento de banco de dados (SGBD) relacional de código aberto amplamente utilizado. Ele foi desenvolvido pela MySQL AB, posteriormente adquirida pela Oracle Corporation. O MySQL é conhecido por sua confiabilidade, escalabilidade e eficiência, sendo uma escolha popular tanto para pequenas aplicações quanto para sistemas complexos.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "NestJs",
+    "iconPath": "/icons/nestjs.png",
+    "description": "NestJS é um framework de desenvolvimento backend em TypeScript para Node.js. Ele se baseia em conceitos de arquitetura moderna e modular, oferecendo uma estrutura robusta para a criação de aplicativos escaláveis e bem estruturados. O NestJS combina o poder do TypeScript com padrões de design inspirados em frameworks como Angular e Express, resultando em uma abordagem altamente organizada e eficiente para o desenvolvimento de APIs e sistemas web.",
+    "use": "Começando a Utilizar",
+    "useType": 2
+  },
+  {
+    "name": "Git",
+    "iconPath": "/icons/git.png",
+    "description": "Git é um sistema de controle de versão distribuído amplamente utilizado para o rastreamento de mudanças em projetos de software. Ele foi criado por Linus Torvalds em 2005 e é uma ferramenta fundamental para o desenvolvimento colaborativo e o gerenciamento eficiente de código-fonte em equipes de programação.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "Asp Net Core",
+    "iconPath": "/icons/net-core.png",
+    "description": "ASP.NET Core é um framework de desenvolvimento web de código aberto desenvolvido pela Microsoft. Ele é uma evolução do ASP.NET, projetado para criar aplicações web modernas, escaláveis e de alto desempenho. O ASP.NET Core é multiplataforma e pode ser executado em Windows, macOS e várias distribuições Linux.",
+    "use": "Utilizei para estudos",
+    "useType": 3
+  },
+  {
+    "name": "Spring Boot",
+    "iconPath": "/icons/spring-boot.png",
+    "description": "Spring Boot é um framework de desenvolvimento de aplicações Java que facilita a criação de aplicações web e serviços com rapidez e eficiência. Ele faz parte do ecossistema Spring, uma das estruturas mais populares para desenvolvimento Java, e tem como objetivo simplificar o processo de configuração e desenvolvimento, permitindo que os desenvolvedores se concentrem na lógica de negócios em vez de lidar com detalhes técnicos.",
+    "use": "Utilizei para estudos",
+    "useType": 3
+  }
+]

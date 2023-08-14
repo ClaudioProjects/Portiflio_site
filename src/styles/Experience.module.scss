@@ -1,0 +1,186 @@
+.box {
+  @apply flex flex-col items-center;
+
+  .experienceItemBox {
+    @apply relative w-full;
+
+    .experienceItem {
+      @apply h-[5vw] w-[5vw] m-[1vw] bg-contrast-purple rounded-[.3vw] flex justify-center items-center p-[1.3vw];
+      box-shadow: 0 0 0.2vw 0.03vw rgba($color: #000000, $alpha: 0.5);
+
+      .imageBox {
+        @apply relative w-full h-full;
+      }
+
+      .imageBoxReact {
+        @extend .imageBox;
+        @apply h-[85%];
+      }
+    }
+  }
+
+  .cardBox {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    @apply h-[30vw] w-[20vw] mt-[1vw] relative;
+
+    .commonCard {
+      @apply w-full h-full flex justify-center items-center rounded-[1vw] absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      background: rgba($color: #000000, $alpha: 0.3);
+      box-shadow: 0 0 0.6vw 0.03vw rgba($color: #000000, $alpha: 0.2);
+    }
+
+    .cardBack {
+      @extend .commonCard;
+      svg {
+        @apply fill-gray-800 text-[10vw];
+      }
+    }
+
+    .cardFront {
+      @extend .commonCard;
+      @apply flex-col justify-normal items-center p-[1vw] cursor-pointer;
+      transform: rotateY(180deg);
+
+      * {
+        text-align: center;
+      }
+
+      .imageBox {
+        @apply w-[5vw] h-[5vw] mt-[2vw] relative overflow-hidden rounded-[.2vw];
+      }
+
+      .imageBoxReact {
+        @extend .imageBox;
+        @apply w-[6.2vw];
+      }
+
+      h4 {
+        @apply font-[400] text-[1.4vw] mt-[1vw];
+      }
+
+      p {
+        @apply font-[300] mt-[.5vw] text-[.8vw] opacity-90;
+      }
+
+      .useBox {
+        @apply relative flex justify-center items-center;
+
+        &::after {
+          @apply absolute left-[-.7vw] w-[.5vw] h-[.5vw] bg-green-500 rounded-[50%];
+          content: "";
+        }
+
+        span {
+          @apply text-[.8vw];
+          text-transform: capitalize;
+        }
+      }
+
+      .useBox_type_0 {
+        @extend .useBox;
+        &::after {
+          @apply bg-green-500;
+        }
+      }
+      .useBox_type_1 {
+        @extend .useBox;
+        &::after {
+          @apply bg-yellow-400;
+        }
+      }
+      .useBox_type_2 {
+        @extend .useBox;
+        &::after {
+          @apply bg-pink-400;
+        }
+      }
+      .useBox_type_3 {
+        @extend .useBox;
+        &::after {
+          @apply bg-violet-500;
+        }
+      }
+    }
+  }
+
+  .cardBoxOpen {
+    @extend .cardBox;
+    transform: rotateY(-180deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    .experienceItemBox {
+      .experienceItem {
+        @apply h-[20vw] w-[20vw] mx-auto bg-contrast-purple rounded-[.3vw] flex justify-center items-center p-[4vw];
+        box-shadow: 0 0 0.4vw 0.06vw rgba($color: #000000, $alpha: 0.5);
+
+        .imageBox {
+          @apply relative w-full h-full;
+        }
+
+        .imageBoxReact {
+          @extend .imageBox;
+          @apply h-[85%];
+        }
+      }
+    }
+
+    .cardBox {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      @apply h-[90vw] w-[60vw] mt-[3vw];
+
+      .commonCard {
+        @apply rounded-[4vw];
+        box-shadow: 0 0 1.2vw 0.06vw rgba($color: #000000, $alpha: 0.2);
+      }
+
+      .cardBack {
+        svg {
+          @apply fill-gray-800 text-[30vw];
+        }
+      }
+
+      .cardFront {
+        @apply p-[6vw];
+        transform: rotateY(180deg);
+
+        * {
+          text-align: center;
+        }
+
+        .imageBox {
+          @apply w-[20vw] h-[20vw] mt-[1vw] rounded-[.8vw];
+        }
+
+        .imageBoxReact {
+          @extend .imageBox;
+          @apply w-[22.2vw];
+        }
+
+        h4 {
+          @apply text-[4vw] mt-[3vw];
+        }
+
+        p {
+          @apply mt-[2vw] text-[2.1vw];
+        }
+
+        .useBox {
+          &::after {
+            @apply left-[-2.4vw] w-[1.7vw] h-[1.7vw];
+          }
+
+          span {
+            @apply text-[2.2vw];
+          }
+        }
+      }
+    }
+  }
+}

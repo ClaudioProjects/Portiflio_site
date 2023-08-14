@@ -1,0 +1,17 @@
+.footerBox {
+  @apply bg-dark-blue-bg w-full left-0 bottom-0 flex justify-center items-center pb-[.5vw];
+
+  span {
+    @apply text-center text-[.87vw];
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  .footerBox {
+    @apply pb-[2vw];
+
+    span {
+      @apply text-[3vw];
+    }
+  }
+}

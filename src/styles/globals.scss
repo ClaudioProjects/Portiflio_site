@@ -1,0 +1,61 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #FFF;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.scrolledObserver {
+  visibility: hidden;
+}
+
+.Toastify__toast {
+  height: 3vw !important;
+  width: 20vw !important;
+}
+
+.toastBody > :nth-child(2) {
+  font-size: .9vw !important;
+  color: #FFF !important
+}
+
+.Toastify__toast--error {
+  background: rgba(239, 68, 68, 1) !important;
+}
+
+.Toastify__toast--success {
+  background: #4BB543 !important;
+}
+
+.Toastify__toast > .toastBody > .Toastify__toast-icon {
+  display: none !important;
+}
+
+@media only screen and (max-width: 768px) { 
+  .Toastify__toast {
+    height: 12vw !important;
+    width: 90vw !important;
+  }
+
+  .toastBody > :nth-child(2) {
+    font-size: 3vw !important;
+  }
+}
