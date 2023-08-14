@@ -37,15 +37,15 @@ export default function Home() {
           de projetos de alta qualidade.
         </p>
 
-        <button className={styles.buttonContactMe}>
-          <div className={styles.borderItem}></div>
-          <div className={styles.content}>
-            <span className={ubuntu.className}>
-              Vamos juntos dar vida às suas ideias?
-            </span>
-            <FaTelegramPlane />
-          </div>
-        </button>
+        <a href="/curriculo.pdf" download>
+          <button className={styles.buttonContactMe}>
+            <div className={styles.borderItem}></div>
+            <div className={styles.content}>
+              <span className={ubuntu.className}>Baixe meu currículo</span>
+              <FaTelegramPlane />
+            </div>
+          </button>
+        </a>
       </div>
 
       <div className={styles.rightSideFirstSectionBox}>

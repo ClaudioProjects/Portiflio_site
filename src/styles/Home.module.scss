@@ -27,6 +27,9 @@
       @apply font-[300] pr-[1vw] pl-[.5vw] opacity-[.85] text-[.9vw] mt-[1.5vw] tracking-[.07vw] rounded-[.1vw] w-[70%];
     }
 
+    a {
+      text-decoration: none;
+    }
     .buttonContactMe {
       @apply bg-contrast-light-blue mt-[1.5vw] p-[.15vw] ml-[.5vw] rounded-[.3vw] relative z-[1] flex justify-center items-center overflow-hidden;
 
@@ -36,7 +39,7 @@
       }
 
       .content {
-        @apply z-10 h-full w-full relative bg-contrast-light-blue text-[1.1vw] p-[.7vw] rounded-[.3vw]; 
+        @apply z-10 h-full w-full relative bg-contrast-light-blue text-[1.1vw] px-[1.4vw] py-[.7vw] rounded-[.3vw]; 
         svg {
           transform: rotate(-45deg);
           @apply text-[1.3vw] ml-[.5vw];
@@ -200,7 +203,7 @@
 
     .rightSideFirstSectionBox {
       .iconsBox {
-        @apply h-[67vw] w-[67vw] rounded-[50%] top-[85vw] right-[5vw];
+        @apply h-[67vw] w-[67vw] rounded-[50%] top-[90vw] right-[5vw];
         animation: borderRotate 20s linear infinite;
   
         svg {
