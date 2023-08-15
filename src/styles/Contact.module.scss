@@ -228,14 +228,14 @@
         @apply my-[13vw] gap-[9vw];
   
         .itemContent {
-          @apply gap-[1vw];
+          @apply gap-[1.5vw];
     
           svg {
-            @apply text-[10vw];
+            @apply text-[5vw];
           }
   
           .text {
-            @apply text-[5vw];
+            @apply text-[4vw];
   
             &::after {
               @apply h-[.7vw] rounded-[10%];

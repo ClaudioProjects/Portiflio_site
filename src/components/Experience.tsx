@@ -73,50 +73,49 @@ export default function Experience() {
             </Swiper>
             <SwipeIndicator />
           </div>
+          <div className="scrolledObserver animate__animated">
+            <div
+              onClick={() => setChosenExperience(null)}
+              className={chosenExperience ? styles.cardBoxOpen : styles.cardBox}
+            >
+              <div className={styles.cardBack}>
+                <FaCode />
+              </div>
 
-          <div
-            onClick={() => setChosenExperience(null)}
-            className={`${
-              chosenExperience ? styles.cardBoxOpen : styles.cardBox
-            } scrolledObserver animate__animated`}
-          >
-            <div className={styles.cardBack}>
-              <FaCode />
-            </div>
+              <div className={styles.cardFront}>
+                {chosenExperience && (
+                  <>
+                    <div
+                      className={
+                        chosenExperience.name === 'React'
+                          ? styles.imageBoxReact
+                          : styles.imageBox
+                      }
+                    >
+                      <Image
+                        src={chosenExperience.iconPath}
+                        alt="chosen experience icon"
+                        fill
+                      />
+                    </div>
+                    <h4>{chosenExperience.name}</h4>
+                    <div
+                      className={
+                        styles[`useBox_type_${chosenExperience.useType}`]
+                      }
+                    >
+                      <span>{chosenExperience.use}</span>
+                    </div>
 
-            <div className={styles.cardFront}>
-              {chosenExperience && (
-                <>
-                  <div
-                    className={
-                      chosenExperience.name === 'React'
-                        ? styles.imageBoxReact
-                        : styles.imageBox
-                    }
-                  >
-                    <Image
-                      src={chosenExperience.iconPath}
-                      alt="chosen experience icon"
-                      fill
-                    />
-                  </div>
-                  <h4>{chosenExperience.name}</h4>
-                  <div
-                    className={
-                      styles[`useBox_type_${chosenExperience.useType}`]
-                    }
-                  >
-                    <span>{chosenExperience.use}</span>
-                  </div>
-
-                  <p>
-                    <TypeWriterEffect
-                      intervalMs={1}
-                      words={[chosenExperience.description]}
-                    />
-                  </p>
-                </>
-              )}
+                    <p>
+                      <TypeWriterEffect
+                        intervalMs={1}
+                        words={[chosenExperience.description]}
+                      />
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>

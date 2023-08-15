@@ -76,7 +76,7 @@
     }
   
     .boxButtons {
-      @apply flex right-[-200vw] top-[-200vh] flex-col gap-[20%] justify-center items-center absolute w-[100vw] h-[100vh] z-20;
+      @apply flex right-[-200vw] top-[-200vh] flex-col gap-[13%] justify-center items-center absolute w-[100vw] h-[100vh] z-20;
       transition: 800ms ease-in-out;
       &::after {
         @apply w-[200vh] h-[200vh] rounded-[50%] bg-contrast-purple absolute z-[-1];

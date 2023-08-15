@@ -3,7 +3,7 @@ import styles from '@/styles/Contact.module.scss'
 import genericStyles from '@/styles/SectionGeneric.module.scss'
 import FormEmail from './FormEmail'
 import Image from 'next/image'
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { showMessage } from '@/utils/toast'
 
 export default function Contact() {
@@ -94,6 +94,17 @@ export default function Contact() {
                 <span onClick={handleCopyText} className={styles.text}>
                   Email
                 </span>
+              </div>
+              <div className={styles.itemContent}>
+                <FaWhatsapp />
+                <a
+                  href="https://wa.me/5532999748210"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.text}
+                >
+                  Whatsapp
+                </a>
               </div>
             </div>
           </div>

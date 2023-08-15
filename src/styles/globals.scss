@@ -11,10 +11,19 @@
 }
 
 body {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+#__next,
+#__next > div.main-pages {
+  height: 100%;
+}
+
+main {
+  background: #4BB543;
   overflow-x: hidden;
-  width: 100vw;
-  height: auto;
-  position: relative;
+  width: 100%;
 }
 
 button {
