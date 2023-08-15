@@ -28,7 +28,8 @@
       @apply w-full h-full flex justify-center items-center rounded-[1vw] absolute;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
-      background: rgba($color: #000000, $alpha: 0.3);
+      -moz-backface-visibility: hidden;
+      background: #2B47A8;
       box-shadow: 0 0 0.6vw 0.03vw rgba($color: #000000, $alpha: 0.2);
     }
 

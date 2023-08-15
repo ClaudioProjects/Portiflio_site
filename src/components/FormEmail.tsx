@@ -62,6 +62,7 @@ export default function FormEmail() {
         position: 'top-left',
       })
       setTimeout(() => setLoading(false), 2000)
+      return
     }
     setSendedEmail(true)
   }
