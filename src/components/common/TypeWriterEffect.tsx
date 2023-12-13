@@ -7,7 +7,7 @@ interface Props {
   fontStyle?: Object
 }
 
-export default function TypeWriterEffect(props: Props) {
+function TypeWriterEffect(props: Props) {
   const [emphasisWord, setEmphasisWord] = useState<string>('')
   const { words, intervalMs, isInfinite, fontStyle } = props
 
@@ -35,3 +35,7 @@ export default function TypeWriterEffect(props: Props) {
 
   return <span style={fontStyle || {}}>{emphasisWord}</span>
 }
+
+export default React.memo(TypeWriterEffect, (prev: Props, current: Props) => {
+  return prev.words.some((word) => current.words.some((item) => item === word))
+})

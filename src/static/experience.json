@@ -21,6 +21,20 @@
     "useType": 0
   },
   {
+    "name": "PHP",
+    "iconPath": "/icons/php1.png",
+    "description": "O PHP é uma linguagem de programação de código aberto amplamente usada para desenvolvimento web. Originalmente criada para a construção de páginas web dinâmicas, ela permite a criação de sites interativos, aplicativos web e sistemas complexos. PHP é conhecido por sua integração fácil com HTML, sendo executado no lado do servidor e gerando conteúdo dinâmico.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
+    "name": "React Native",
+    "iconPath": "/icons/react.png",
+    "description": "É um framework de desenvolvimento de aplicativos móveis criado pelo Facebook. Ele permite a construção de aplicativos para iOS e Android utilizando JavaScript e React, uma biblioteca de JavaScript para construção de interfaces de usuário. Uma das principais vantagens do React Native é a capacidade de desenvolver aplicativos nativos usando uma única base de código.",
+    "use": "Utilizo constantemente",
+    "useType": 0
+  },
+  {
     "name": "Express",
     "iconPath": "/icons/express.png",
     "description": "Express.js, muitas vezes referido apenas como 'Express', é um framework web minimalista para Node.js. Ele é projetado para simplificar o desenvolvimento de aplicações web e APIs, fornecendo uma camada de abstração sobre o servidor HTTP do Node.js e oferecendo recursos para lidar com rotas, middlewares e solicitações de maneira eficiente e organizada.",

@@ -56,7 +56,7 @@ export default function Experience() {
                   >
                     <div
                       className={
-                        experience.name === 'React'
+                        ['React', 'React Native'].includes(experience.name)
                           ? styles.imageBoxReact
                           : styles.imageBox
                       }
@@ -87,7 +87,9 @@ export default function Experience() {
                   <>
                     <div
                       className={
-                        chosenExperience.name === 'React'
+                        ['React', 'React Native'].includes(
+                          chosenExperience.name,
+                        )
                           ? styles.imageBoxReact
                           : styles.imageBox
                       }
